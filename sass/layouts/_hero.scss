@@ -3,9 +3,8 @@
   padding-top: 118px;
   padding-bottom: 118px;
   background-color: #2f303a;
-  background-image: var(--background-gradient),
-    url(../../images/hero-bg-mob.jpg);
-  // background-image: var(--background-gradient), url(../images/hero-bg.jpg);
+  background-image: var(--background-gradient), url(././images/hero-bg-mob.jpg);
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   max-width: 100%;
@@ -20,9 +19,21 @@
     @include font(900, 26, 1.62, 00.06em);
     text-transform: uppercase;
   }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: var(--background-gradient),
+      url(../../images/hero-bg-mob2x.jpg);
+  }
   @include tablet {
     background-image: var(--background-gradient),
-      url(../../images/hero-bg-tab.jpg);
+      url(././images/hero-bg-tab.jpg);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: var(--background-gradient),
+        url(././images/hero-bg-tab2x.jpg);
+    }
   }
 
   @include desktop {

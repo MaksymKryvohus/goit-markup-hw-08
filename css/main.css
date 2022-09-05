@@ -231,7 +231,8 @@ img {
   padding-top: 118px;
   padding-bottom: 118px;
   background-color: #2f303a;
-  background-image: var(--background-gradient), url(../../images/hero-bg-mob.jpg);
+  background-image: var(--background-gradient), url(././images/hero-bg-mob.jpg);
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   max-width: 100%;
@@ -249,9 +250,19 @@ img {
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: var(--background-gradient), url(../../images/hero-bg-mob2x.jpg);
+  }
+}
 @media screen and (min-width: 768px) {
   .hero {
-    background-image: var(--background-gradient), url(../../images/hero-bg-tab.jpg);
+    background-image: var(--background-gradient), url(././images/hero-bg-tab.jpg);
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: var(--background-gradient), url(././images/hero-bg-tab2x.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
