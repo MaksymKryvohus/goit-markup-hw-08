@@ -1,0 +1,13 @@
+.logo {
+  font-family: Raleway, cursive;
+  text-decoration: none;
+  color: var(--accent-color);
+  @include font(700, 26, 1.2);
+  // font-weight: 700;
+  // font-size: 26px;
+  // line-height: 1.2;
+  // letter-spacing: 0.03em;
+  &__item {
+    color: #000000;
+  }
+}

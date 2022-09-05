@@ -1,0 +1,33 @@
+.hero {
+  text-align: center;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  background-color: #2f303a;
+  background-image: var(--background-gradient),
+    url(../../images/hero-bg-mob.jpg);
+  // background-image: var(--background-gradient), url(../images/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 100%;
+  margin: auto;
+  &__title {
+    max-width: 696px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+
+    color: var(--primary-white-color);
+    @include font(900, 26, 1.62, 00.06em);
+    text-transform: uppercase;
+  }
+  @include tablet {
+    background-image: var(--background-gradient),
+      url(../../images/hero-bg-tab.jpg);
+  }
+
+  @include desktop {
+    padding-bottom: 200px;
+    padding-top: 200px;
+    background-image: var(--background-gradient), url(../images/hero-bg.jpg);
+  }
+}
