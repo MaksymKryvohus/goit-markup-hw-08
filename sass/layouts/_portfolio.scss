@@ -4,7 +4,6 @@
   gap: 8px;
   margin-bottom: 40px;
   @include tablet {
-    width: 100%;
     justify-content: center;
   }
   @include desktop {
@@ -68,22 +67,14 @@
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-
-  @include desktop {
-    display: flex;
-    flex-wrap: wrap;
-    margin: -15px;
-  }
 }
 .portfolio-item {
-  width: 354px;
+  width: 100%;
   @include tablet {
-    height: 440px;
+    width: calc((100% - 30px) / 2);
   }
-
   @include desktop {
     width: calc((100% - 90px) / 3);
-    margin: 15px;
   }
 }
 
