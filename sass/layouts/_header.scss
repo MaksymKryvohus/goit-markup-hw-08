@@ -17,7 +17,7 @@
 
 .navigation {
   display: none;
-  @include desktop {
+  @include tablet {
     display: flex;
     align-items: center;
     &__list {
@@ -43,9 +43,9 @@
 
 .auth {
   display: none;
-  @include desktop {
+  @include tablet {
     display: flex;
-    column-gap: 50px;
+    flex-direction: column;
     &__icon {
       margin-right: 10px;
       fill: currentColor;
@@ -63,6 +63,10 @@
       }
     }
   }
+  @include desktop {
+    display: flex;
+    column-gap: 50px;
+  }
 }
 .header__auth {
   margin-left: auto;
@@ -70,7 +74,7 @@
 .menu-btn-open {
   background: #ffffff;
   border: transparent;
-  @include desktop {
+  @include tablet {
     display: none;
   }
 }
@@ -128,29 +132,33 @@
 
 .mob-auth {
   margin-bottom: 64px;
+  &-tel {
+    display: block;
+    margin-bottom: 32px;
+    text-decoration: none;
+    color: var(--accent-color);
+    @include font(500, 34, 1.18, 00.02em);
+  }
+  &-mail {
+    text-decoration: none;
+    color: var(--primary-text-color);
+    @include font(500, 24, 1.17, 00.02em);
+  }
 }
-.mob-auth-tel {
-  display: block;
-  margin-bottom: 32px;
-  text-decoration: none;
-  color: var(--accent-color);
-  @include font(500, 34, 1.18, 00.02em);
-}
-.mob-auth-mail {
-  text-decoration: none;
-  color: var(--primary-text-color);
-  @include font(500, 24, 1.17, 00.02em);
-}
+
 .mob-soc {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.mob-soc-item:not(:last-child) {
-  margin-right: 20px;
-}
-.mob-soc-link {
-  @include font(500, 18, 1.22, 00.02em);
-  color: var(--accent-color);
-  text-decoration: none;
+  &-item {
+    padding: 0 10px;
+    &:not(:last-child) {
+      border-right: 1px solid rgba(33, 33, 33, 0.2);
+    }
+  }
+  &-link {
+    @include font(500, 18, 1.22, 00.02em);
+    color: var(--accent-color);
+    text-decoration: none;
+  }
 }

@@ -1,8 +1,18 @@
 .portfolio-filter {
   display: flex;
-  justify-content: center;
-  column-gap: 8px;
-  margin-bottom: 56px;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 40px;
+  @include tablet {
+    width: 100%;
+    justify-content: center;
+  }
+  @include desktop {
+    display: flex;
+    justify-content: center;
+    column-gap: 8px;
+    margin-bottom: 56px;
+  }
 }
 
 .portfolio-btn {
@@ -57,11 +67,24 @@
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
-  margin: -15px;
+  gap: 30px;
+
+  @include desktop {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 .portfolio-item {
-  width: calc((100% - 90px) / 3);
-  margin: 15px;
+  width: 354px;
+  @include tablet {
+    height: 440px;
+  }
+
+  @include desktop {
+    width: calc((100% - 90px) / 3);
+    margin: 15px;
+  }
 }
 
 .filter-card {
