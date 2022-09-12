@@ -242,6 +242,7 @@ img {
 @media screen and (min-width: 1200px) {
   .auth {
     display: flex;
+    flex-direction: row;
     -moz-column-gap: 50px;
          column-gap: 50px;
   }
@@ -341,7 +342,6 @@ img {
 .mob-soc {
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 .mob-soc-item {
   padding: 0 10px;
@@ -381,6 +381,14 @@ img {
   line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+  }
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
@@ -441,6 +449,7 @@ img {
 }
 
 .features__subtitle {
+  text-align: center;
   margin-bottom: 10px;
   color: var(--title-text-color);
   font-weight: 700;
@@ -449,7 +458,6 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
-
 .features__text {
   font-size: 14px;
   line-height: 1.71;
@@ -458,6 +466,12 @@ img {
 
 .work {
   padding-top: 0;
+  padding-bottom: 0;
+}
+@media screen and (min-width: 1200px) {
+  .work {
+    padding-bottom: 94px;
+  }
 }
 .work-title {
   display: none;
@@ -512,13 +526,22 @@ img {
   background: #f5f4fa;
 }
 .team-title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   color: var(--title-text-color);
+  text-align: center;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.17;
   letter-spacing: 0.03em;
-  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .team-title {
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+  }
 }
 .team-list {
   display: flex;
@@ -586,12 +609,21 @@ img {
 
 .clients-title {
   color: var(--title-text-color);
+  margin-bottom: 30px;
+  text-align: center;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.17;
   letter-spacing: 0.03em;
-  margin-bottom: 50px;
-  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .clients-title {
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+  }
 }
 
 .clients-list {
@@ -633,10 +665,16 @@ img {
   flex-direction: column;
   align-items: center;
 }
+@media screen and (min-width: 768px) {
+  .footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}
 @media screen and (min-width: 1200px) {
   .footer {
     flex-direction: row;
-    display: flex;
     align-items: baseline;
     gap: 70px;
   }
@@ -669,6 +707,11 @@ img {
   flex-direction: column;
   align-items: center;
   gap: 8px;
+}
+@media screen and (min-width: 1200px) {
+  .footer-address .address-list {
+    align-items: flex-start;
+  }
 }
 .footer-link {
   align-items: center;
@@ -783,6 +826,7 @@ img {
 @media screen and (min-width: 1200px) {
   .online-form {
     flex-direction: row;
+    gap: 0px;
   }
 }
 
@@ -970,18 +1014,31 @@ img {
 }
 
 .modal {
-  padding: 40px;
-  position: absolute;
-  width: 528px;
-  min-height: 581px;
+  position: fixed;
   background-color: #fff;
+  padding: 40px;
   border-radius: 4px;
+  width: 450px;
+  top: 93px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   transition-property: transform, scale;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (max-width: 479px) {
+  .modal {
+    width: 100%;
+    min-height: 609px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    position: absolute;
+    width: 528px;
+    min-height: 581px;
+  }
 }
 .modal-title {
   font-weight: 700;
@@ -1125,12 +1182,19 @@ img {
 }
 
 .check-text {
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
   display: flex;
   justify-content: center;
+}
+@media screen and (min-width: 1200px) {
+  .check-text {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
 }
 .check-text span {
   display: flex;
@@ -1160,12 +1224,19 @@ img {
 .check-link {
   display: block;
   margin-left: 5px;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
   color: var(--accent-color);
+}
+@media screen and (min-width: 1200px) {
+  .check-link {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
 }
 
 .check-icon {

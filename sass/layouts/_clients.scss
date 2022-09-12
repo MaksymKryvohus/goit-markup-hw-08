@@ -1,8 +1,12 @@
 .clients-title {
   color: var(--title-text-color);
-  @include font($fw: 700);
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   text-align: center;
+  @include font(700, 28, 1.17);
+  @include desktop {
+    margin-bottom: 50px;
+    @include font(700, 36, 1.17);
+  }
 }
 .clients-list {
   display: flex;

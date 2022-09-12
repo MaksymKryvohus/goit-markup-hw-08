@@ -1,5 +1,9 @@
 .work {
   padding-top: 0;
+  padding-bottom: 0;
+  @include desktop {
+    padding-bottom: 94px;
+  }
   &-title {
     display: none;
     @include desktop {

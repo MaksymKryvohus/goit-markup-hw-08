@@ -1,10 +1,14 @@
 .team {
   background: #f5f4fa;
   &-title {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     color: var(--title-text-color);
-    @include font(700, 36, 1.17);
     text-align: center;
+    @include font(700, 28, 1.17);
+    @include desktop {
+      margin-bottom: 50px;
+      @include font(700, 36, 1.17);
+    }
   }
   &-list {
     display: flex;
