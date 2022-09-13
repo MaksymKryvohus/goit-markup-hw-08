@@ -10,7 +10,7 @@
   max-width: 100%;
   margin: auto;
   &__title {
-    max-width: 696px;
+    max-width: 360px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
@@ -19,6 +19,7 @@
     @include font(900, 26, 1.62, 00.06em);
     text-transform: uppercase;
     @include desktop {
+      max-width: 696px;
       @include font(900, 44, 1.36, 00.06em);
     }
   }
