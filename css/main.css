@@ -889,9 +889,9 @@ img {
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 320px) {
   .online-input {
-    width: 300px;
+    width: 290px;
   }
 }
 @media screen and (min-width: 1200px) {

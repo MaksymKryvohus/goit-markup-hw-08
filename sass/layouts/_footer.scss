@@ -172,8 +172,8 @@
     @include font(null, 16, 1.25);
     color: rgba(255, 255, 255, 0.6);
   }
-  @media screen and (max-width: 479px) {
-    width: 300px;
+  @media screen and (max-width: 320px) {
+    width: 290px;
   }
   @include desktop {
     width: 358px;
