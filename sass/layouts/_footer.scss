@@ -160,9 +160,6 @@
   }
 }
 .online-input {
-  @media screen and (max-width: 479px) {
-    width: 300px;
-  }
   padding-left: 16px;
   width: 420px;
   background-color: transparent;
@@ -174,6 +171,9 @@
   &::placeholder {
     @include font(null, 16, 1.25);
     color: rgba(255, 255, 255, 0.6);
+  }
+  @media screen and (max-width: 479px) {
+    width: 300px;
   }
   @include desktop {
     width: 358px;
