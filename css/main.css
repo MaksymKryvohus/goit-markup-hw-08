@@ -862,6 +862,11 @@ img {
   margin-right: 12px;
   color: var(--primary-white-color);
 }
+@media screen and (max-width: 479px) {
+  .online-input {
+    width: 300px;
+  }
+}
 .online-input::-moz-placeholder {
   font-size: 16px;
   line-height: 1.25;
